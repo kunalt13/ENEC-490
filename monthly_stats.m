@@ -1,26 +1,18 @@
-function [ n ] = monthly_stats( vector )
-%function that creates monthly gas prices to annual profile
+% easiest way is if the function takes as input your 12 X N matrix d created by the annual profile function
+function [ n ] = monthly_stats(d)
 
+%function that calculates price statistics for each month
 
-new_years = 1997:1:2016;
-start = find(new_years>=2008);
-
-n = vector(:,start);
 
 n = zeros(12, 2);
 
-for i = 1
-    for j = 1:12
-        n(j,i) = mean(vector)
-    end
+for j = 1:12
+        
+        % put mean of month j in the jth row of matrix n, in the first column
+        n(j,1) = mean()
+        % put std. deviation of month j in the jth row of matrix n, in the second column
+        n(j,2) = std()
+        
 end
 
-for i = 2
-    for j = 1:months
-        n(j,i) = std(vector)
-    end
-end
-
-
-end
 
