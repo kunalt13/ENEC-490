@@ -85,9 +85,9 @@ end
 
 find(outliers>0)
 
-monthlypeak_data = peak_data(transformed_data);
 temp_data = csvread('temp_data.csv');
-scatter(temp_data,monthlypeak_data);
+temp_data = temp_data(:,2);
+scatter(temp_data,peak_data);
 
 
 
