@@ -23,7 +23,7 @@ legend('2008','2009','2010','2011','2012','2013','2014','2015','2016');
 
 
 %call monthly stats function
-s = monthly_stats(data);
+s = monthly_stats(d);
 
 % april
 april = s(4,1) + s(4,2)*randn(1000,1);
